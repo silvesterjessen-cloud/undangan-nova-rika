@@ -90,4 +90,23 @@
       }
     });
   });
+
+  // ---- COPY TO CLIPBOARD ----
+  window.copyToClipboard = function (elementId, button) {
+    const textToCopy = document.getElementById(elementId).innerText.replace(/\s+/g, '');
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      const span = button.querySelector('span');
+      const originalText = span.innerText;
+
+      button.classList.add('copied');
+      span.innerText = 'Tersalin!';
+
+      setTimeout(() => {
+        button.classList.remove('copied');
+        span.innerText = originalText;
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  };
 })();
