@@ -7,8 +7,8 @@
   'use strict';
 
   // ---- COUNTDOWN TIMER ----
-  // Target: March 15, 2026 at 09:00 WIB (UTC+7)
-  const weddingDate = new Date('2026-03-15T09:00:00+07:00');
+  // Target: March 19, 2026 at 09:00 WIB (UTC+7)
+  const weddingDate = new Date('2026-03-19T09:00:00+07:00');
 
   const cdDays = document.getElementById('cd-days');
   const cdHours = document.getElementById('cd-hours');
